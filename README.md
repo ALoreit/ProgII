@@ -1,2 +1,2 @@
 # ProgII
-ProgII Aufgaben aus dem Praxisteil 
+ProgII Lösungen zu Aufgaben aus dem Praxisteil
