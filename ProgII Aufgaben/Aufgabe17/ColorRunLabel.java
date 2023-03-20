@@ -15,6 +15,7 @@ public class ColorRunLabel extends JLabel implements Runnable{
 	Thread t = new Thread(this);
 	
 	public ColorRunLabel(Color color) {
+		this.setOpaque(true);
 		this.setBackground(color);
 		this.setFont(new Font("Arial", Font.BOLD, 50));
 	}

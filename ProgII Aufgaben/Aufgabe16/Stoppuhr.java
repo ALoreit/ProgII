@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 import ProgIOTools.IOTools;
 
@@ -22,8 +23,9 @@ public class Stoppuhr {
 		IOTools.readLine();
 		running = false;
 		Date ende = new Date();
+		long difference = Math.abs(now.getTime()-ende.getTime());
 		System.out.println("Stoppzeitpunkt: " + ende);
-		System.out.println("Gesamtlaufzeit: " + (now.compareTo(ende)));
+		System.out.println("Gesamtlaufzeit: " + TimeUnit.SECONDS.convert(difference, TimeUnit.MILLISECONDS));
 
 	}
 
@@ -52,3 +54,4 @@ public class Stoppuhr {
 
 	}
 }
+
