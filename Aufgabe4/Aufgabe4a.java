@@ -46,6 +46,10 @@ public class Aufgabe4a {
 		daten2.stream().filter(p -> p.bundesland.equalsIgnoreCase("Rheinland-Pfalz")).forEach(System.out::println);
 		long aelter50 = daten2.stream().filter(p -> p.alter > 50).count();
 		System.out.println("Personen über 50: " + aelter50);
+		//Personen nach alter sortiert
+		daten2.stream().sorted((p1, p2) -> p1.alter.compareTo(p2.alter)).forEach(s -> System.out.println("Alter: "+ s.alter));
+		//j
+		daten2.stream().filter(p -> p.name.contains("nn")).distinct().forEach(System.out::println);
 		
 		}
 }
