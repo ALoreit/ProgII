@@ -15,18 +15,6 @@ import java.util.stream.Stream;
 import ProgIOTools.IOTools;
 
 public class Aufgabe4a {
-	public static ArrayList<String> readTxt() throws FileNotFoundException {
-		String filename = "IO/" + IOTools.readLine("Datei Name: ");
-		ArrayList<String> stringList = new ArrayList<>();
-		
-		try (Stream<String> stream = Files.lines(Paths.get(filename))) {
-            stream.forEach(s -> stringList.add(s));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-		
-		return stringList;
-	}
 	
 	public static ArrayList<String> readTxt2 (File f) throws IOException{
 		ArrayList<String> stringList = new ArrayList<>();
