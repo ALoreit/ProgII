@@ -44,6 +44,14 @@ public class EratosthenesSieb {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(sieb());
+		Set<Integer> s = sieb();
+		Iterator<Integer> it = s.iterator();
+		int i = 0;
+		while(it.hasNext()) {
+			System.out.print(it.next() + ", ");
+			i++;
+			if(i == 10) {
+				System.out.println();
+				i = 0;
 	}
 }
